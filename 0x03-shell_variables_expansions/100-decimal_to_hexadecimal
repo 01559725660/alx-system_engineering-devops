@@ -1,2 +1,2 @@
 #!/bin/bash                               
-hex=$(([##10]dec)) $DECIMAL
+printf '%x\n' $DECIMAL
