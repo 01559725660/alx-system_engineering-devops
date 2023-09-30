@@ -1,0 +1,16 @@
+bash
+#!/bin/bash
+
+filename="/etc/passwd"
+
+while read -r line
+do
+    # Split the line into an array
+    IFS=':' read -ra fields <<< "$line"
+
+    # Display the username, user id, and home directory path
+    echo "Username: ${fields[0]}"
+    echo "User ID: ${fields[2]}"
+    echo "Home Directory: ${fields[5]}"
+    echo "-----------------------------"
+done < "$filename"
