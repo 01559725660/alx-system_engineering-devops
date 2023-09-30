@@ -1,0 +1,15 @@
+bash
+#!/bin/bash
+
+i=1
+while [ $i -le 10 ]
+do
+    if [ $i -eq 9 ]
+    then
+        echo "Best School"
+        echo "Hi"
+    else
+        echo "Best School 10 times: $i"
+    fi
+    i=$((i+1))
+done
